@@ -124,7 +124,7 @@ public class MatchActivity extends AppCompatActivity {
                 } else if (home_score > away_score) {
                     the_winner = home_team;
                 } else {
-                    the_winner = "Draw";
+                    the_winner = "No One, Because of a Draw";
                 }
 
                 Intent intent = new Intent(MatchActivity.this, ResultActivity.class);
