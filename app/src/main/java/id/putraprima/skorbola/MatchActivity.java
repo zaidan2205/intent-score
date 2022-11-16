@@ -24,6 +24,7 @@ public class MatchActivity extends AppCompatActivity {
     private Button btn_add_away2;
     private Button btn_add_away3;
     private Button btn_result;
+    private Button btn_reset;
     private int home_score;
     private int away_score;
     private String home_team;
@@ -52,6 +53,7 @@ public class MatchActivity extends AppCompatActivity {
         btn_add_away2 = findViewById(R.id.btn_add_away2);
         btn_add_away3 = findViewById(R.id.btn_add_away3);
         btn_result = findViewById(R.id.btn_result);
+        btn_reset = findViewById(R.id.btn_reset);
 
         home_score = 0;
         away_score = 0;
@@ -111,6 +113,16 @@ public class MatchActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 away_score += 3;
+                score_away.setText((String.valueOf(away_score)));
+            }
+        });
+
+        btn_reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                home_score = 0;
+                away_score = 0;
+                score_home.setText((String.valueOf(home_score)));
                 score_away.setText((String.valueOf(away_score)));
             }
         });
